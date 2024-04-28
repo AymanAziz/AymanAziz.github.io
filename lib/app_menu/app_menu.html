@@ -1,0 +1,254 @@
+<div class="app-sidebar sidebar-shadow">
+    <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ms-auto">
+            <div>
+                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="app-header__mobile-menu">
+        <div>
+            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="app-header__menu">
+        <span>
+            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                <span class="btn-icon-wrapper">
+                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                </span>
+            </button>
+        </span>
+    </div>
+
+    <div id="admin_menu" class="scrollbar-sidebar">
+        <div class="app-sidebar__inner">
+                <!-- admin / doctor menu -->
+
+            <ul class="vertical-nav-menu">
+                <li class="app-sidebar__heading">Menu</li>
+                <li>
+                    <a id="home_index">
+                        <i class="metismenu-icon pe-7s-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a id="patient_list">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        My Patient
+                    </a>
+                </li>
+                <li class="mm-active">
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        Doctor
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a id="list_doctor" class="mm-active">
+                                <i class="metismenu-icon"></i>
+                                Doctor
+                            </a>
+                        </li>
+                        <li>
+                            <a id="add_doctor">
+                                <i class="metismenu-icon"></i>
+                                Add Doctor
+                            </a>
+                        </li>
+                        <li>
+                            <a id="profile_doctor">
+                                <i class="metismenu-icon"></i>
+                                Profile
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a id="notification_index">
+                        <i class="metismenu-icon pe-7s-bell"></i>
+                        Notifications
+                    </a>
+                </li>
+                <li>
+                    <a id="appointment_index">
+                        <i class="metismenu-icon pe-7s-date"></i>
+                        Appointment
+                    </a>
+                </li>
+                <li>
+                    <a id="message_index">
+                        <i class="metismenu-icon pe-7s-chat"></i>
+                        Messages
+                    </a>
+                </li>
+                <li>
+                    <a id="patient_review">
+                        <i class="metismenu-icon pe-7s-chat"></i>
+                        Patient Review
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="widgets-profile-boxes.html">
+                        <i class="metismenu-icon pe-7s-config"></i>
+                        Settings
+                    </a>
+                </li> -->
+            </ul>
+                <!-- user menu -->
+
+            <ul class="vertical-nav-menu">
+                <li class="app-sidebar__heading">Menu (User)</li>
+                <li>
+                    <a id="home_index_user">
+                        <i class="metismenu-icon pe-7s-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a id="appointment_list">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        List Appointment
+                    </a>
+                </li>
+                <li>
+                    <a id="book_appointment">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        Book Appointment
+                    </a>
+                </li>
+                <li>
+                    <a id="message_index_user">
+                        <i class="metismenu-icon pe-7s-chat"></i>
+                        Messages
+                    </a>
+                </li>
+                <li>
+                    <a id="user_profile">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        Profile
+                    </a>
+                </li>
+                
+            </ul>
+
+           
+        </div>
+    </div>
+
+
+
+</div>
+<script>
+      $(document).ready(function() {
+                
+                $('#home_index').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Dashboard/dashboards-minimal.html');
+                });
+
+                $('#notification_index').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/notification/notification.html');
+                });
+
+                $('#message_index').click(function(e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    $('#main-wrapper-screen').load('../lib/message/apps-chat.html');
+                });
+
+                $('#list_doctor').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Doctor/list_doctor.html');
+                });
+
+                $('#add_doctor').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Doctor/add_doctor.html');
+                });
+            
+                
+                $('#patient_list').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/patient/patient_list.html');
+                });
+
+                
+                $('#profile_doctor').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Doctor/doctor_profile.html');
+                });
+
+                $('#patient_review').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Review/Doctor/patient_review.html');
+                });
+
+                                
+                $('#appointment_index').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/appointment/appointment.html');
+                });
+
+                $('#book_appointment').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/appointment/user/book_appointment.html');
+                });
+
+                $('#user_profile').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/user_profile/user_profile.html');
+                });
+
+                $('#appointment_list').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/appointment/user/appointment_list.html');
+                });
+
+                $('#message_index_user').click(function(e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    $('#main-wrapper-screen').load('../lib/message/apps-chat.html');
+                });
+
+                $('#home_index_user').click(function(e) {
+                    e.preventDefault(); 
+                    $('#main-wrapper-screen').load('../lib/Dashboard/user/user_dashboard.html');
+                });
+                // $('#admin_menu').hide();
+
+                // function getUrlParameter(name) {
+                //     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                //     return results ? decodeURIComponent(results[1]) : null;
+                // }
+
+                // var catValue = getUrlParameter('cat');
+
+                // if (catValue == 3)// admin
+                // {
+                //     $('#admin_menu').show();
+                // }
+                // if (catValue == 2) // staff
+                // {
+                //     // $('#staff_menu').show();
+                // }
+                // else // external user
+                // {
+                //     $('#user_menu').show();
+                // }
+
+
+            });
+            </script>
+</script>

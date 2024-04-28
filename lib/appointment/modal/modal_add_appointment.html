@@ -1,0 +1,101 @@
+
+<div>
+    <form>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label">Patient Name <span class="text-danger">*</span></label>
+                    <input name="name" id="name" type="text" class="form-control" placeholder="Patient Name :">
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label">Departments</label>
+                    <select class="form-select form-control">
+                        <option value="EY">Eye Care</option>
+                        <option value="GY">Gynecologist</option>
+                        <option value="PS">Psychotherapist</option>
+                        <option value="OR">Orthopedic</option>
+                        <option value="DE">Dentist</option>
+                        <option value="GA">Gastrologist</option>
+                        <option value="UR">Urologist</option>
+                        <option value="NE">Neurologist</option>
+                    </select>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label">Doctor</label>
+                    <select class="form-select form-control">
+                        <option value="CA">Dr. Calvin Carlo</option>
+                        <option value="CR">Dr. Cristino Murphy</option>
+                        <option value="AL">Dr. Alia Reddy</option>
+                        <option value="TO">Dr. Toni Kovar</option>
+                        <option value="JE">Dr. Jessica McFarlane</option>
+                        <option value="EL">Dr. Elsie Sherman</option>
+                        <option value="BE">Dr. Bertha Magers</option>
+                        <option value="LO">Dr. Louis Batey</option>
+                    </select>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Your email :">
+                </div> 
+            </div><!--end col-->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label">Your Phone <span class="text-danger">*</span></label>
+                    <input name="phone" id="phone" type="tel" class="form-control" placeholder="Your Phone :">
+                </div> 
+            </div><!--end col-->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3" style="position: relative;">
+                    <label class="form-label"> Date : </label>
+                    <input type="text" class="form-control" data-toggle="datepicker" placeholder="Select Date :">
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label" for="input-time">Time : </label>
+                    <input name="time" type="text" class="form-control timepicker" id="input-time" placeholder="03:30 PM">
+                </div> 
+            </div><!--end col-->
+
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label">Comments <span class="text-danger">*</span></label>
+                    <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your Message :"></textarea>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-12">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Book An Appointment</button>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </form>
+</div>   
+
+<script type="text/javascript" src="../vendors/@chenfengyuan/datepicker/dist/datepicker.min.js"></script>
+<script type="text/javascript" src="../vendors/daterangepicker/daterangepicker.js"></script>
+
+<script type="text/javascript" src="../js/form-components/datepicker.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script>
+        $('[data-toggle="datepicker"]').datepicker({
+            format: 'dd-mm-yyyy',
+            zIndex: 9999,
+            // startDate: moment(),
+            closable: true
+        });
+
+</script>
